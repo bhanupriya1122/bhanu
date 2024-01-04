@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "ca20acab-7099-49e5-a6f0-5243f6b2c7c4",
+		"name": "DSS MicroService (Movies-Service)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21009776"
+	},
+	"item": [
+		{
+			"name": "add new movies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\r\n        \"movieTitle\": \"Mera Bharat Mahan\",\r\n        \"movieCost\": \"2500000\",\r\n        \"movieYear\": \"2022\",\r\n        \"actorId\": 1,\r\n        \"duration\": \"3.5\",\r\n        \"overview\": \"This movies is good\"\r\n        \r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/live-digital-movies-service/movies/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-movies-service",
+						"movies",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies list by add without Review",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/live-digital-movies-service/movies/movies/noReviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-movies-service",
+						"movies",
+						"movies",
+						"noReviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete movies By moviesId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/live-digital-movies-service/movies/movies/delete/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-movies-service",
+						"movies",
+						"movies",
+						"delete",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update movies by moviesId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\r\n         \"movieId\":1,\r\n        \"movieTitle\": \"Mera Bharat Mahan\",\r\n        \"movieCost\": \"2500000\",\r\n        \"movieYear\": \"2022\",\r\n        \"actorId\": 1,\r\n        \"duration\": \"3.5\",\r\n        \"overview\": \"This movies is good\"\r\n        \r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/live-digital-movies-service/movies/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-movies-service",
+						"movies",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check movies for one year old by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/live-digital-movies-service/movies/movies/checkForOneYearOld/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-movies-service",
+						"movies",
+						"movies",
+						"checkForOneYearOld",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies list by moviesId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/live-digital-movies-service/movies/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-movies-service",
+						"movies",
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movies list by ActorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/live-digital-movies-service/movies/movies/withActor/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-movies-service",
+						"movies",
+						"movies",
+						"withActor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
