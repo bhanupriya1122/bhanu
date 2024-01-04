@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "7401eacc-c201-4897-a1aa-7259e12c9395",
+		"name": "DSS MicroService (Actor-Service)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21009776"
+	},
+	"item": [
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\r\n        \"firstName\": \"Ajay\",\r\n        \"lastName\": \"Devgon\",\r\n        \"about\": \"Action Hero\",\r\n        \"age\": 39,\r\n        \"gender\": \"Male\"\r\n        \r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/live-digital-actor-service/actors/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-actor-service",
+						"actors",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all actor list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/live-digital-actor-service/actors/getList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-actor-service",
+						"actors",
+						"getList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete actor by actorId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/live-digital-actor-service/actors/delete/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-actor-service",
+						"actors",
+						"delete",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update by actorId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\r\n         \"actorId\": 2,\r\n        \"firstName\": \"Ajay\",\r\n        \"lastName\": \"Devgon\",\r\n        \"about\": \"Action Hero\",\r\n        \"age\": 39,\r\n        \"gender\": \"Male\"\r\n        \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/live-digital-actor-service/actors/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-actor-service",
+						"actors",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find by actoriId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/live-digital-actor-service/actors/find/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-actor-service",
+						"actors",
+						"find",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
