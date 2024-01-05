@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "62b1753e-43f2-45fc-b121-2ffd0c3b6b00",
+		"name": "DSS MicroService (Review-Service)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21009776"
+	},
+	"item": [
+		{
+			"name": "add rating for movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\r\n        \"movieId\": \"1\",\r\n        \"datePosted\": \"Devgon\",\r\n        \"rating\": \"4\",\r\n        \"description\": \"This is good movies\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/live-digital-review-service/review/intance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-review-service",
+						"review",
+						"intance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all review list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/live-digital-review-service/review/getReviewList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-review-service",
+						"review",
+						"getReviewList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get review list by reviewId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/live-digital-review-service/review/getReviewById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-review-service",
+						"review",
+						"getReviewById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update review by reviewId with request form submited",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\r\n         \"reviewId\":1,\r\n        \"movieId\": \"1\",\r\n        \"datePosted\": \"02/02/2023\",\r\n        \"rating\": \"4\",\r\n        \"description\": \"This is good movies\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/live-digital-review-service/review/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-review-service",
+						"review",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8765/live-digital-actor-service/actors/find/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/live-digital-review-service/review/deleteReviewById/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-review-service",
+						"review",
+						"deleteReviewById",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add rating for movies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\r\n        \"movieId\": \"1\",\r\n        \"datePosted\": \"04/05/2022\",\r\n        \"rating\": \"4\",\r\n        \"description\": \"This is good movies\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/live-digital-review-service/review/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"live-digital-review-service",
+						"review",
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
